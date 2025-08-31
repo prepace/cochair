@@ -1,26 +1,240 @@
 @import "tailwindcss";
 
+/* Sun Theme - Light Blue and Yellow with Better Contrast */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 195 100% 97%;
+  --foreground: 0 0% 25%;
+  --card: 195 100% 99%;
+  --card-foreground: 220 50% 8%;
+  --popover: 195 100% 99%;
+  --popover-foreground: 220 50% 8%;
+  --primary: 45 100% 35%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 195 100% 85%;
+  --secondary-foreground: 220 50% 8%;
+  --muted: 195 100% 90%;
+  --muted-foreground: 0 0% 45%;
+  --accent: 0 0% 75%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 195 50% 75%;
+  --input: 195 50% 85%;
+  --ring: 45 100% 35%;
+  --chart-1: 45 100% 35%;
+  --chart-2: 195 100% 45%;
+  --chart-3: 200 100% 35%;
+  --chart-4: 50 100% 40%;
+  --chart-5: 190 100% 50%;
+  --radius: 0.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Moon Theme - Dark Blue and Silver */
+.dark {
+  --background: 220 39% 11%;
+  --foreground: 0 0% 85%;
+  --card: 220 39% 15%;
+  --card-foreground: 0 0% 85%;
+  --popover: 220 39% 15%;
+  --popover-foreground: 0 0% 85%;
+  --primary: 0 0% 75%;
+  --primary-foreground: 220 39% 11%;
+  --secondary: 220 30% 20%;
+  --secondary-foreground: 0 0% 85%;
+  --muted: 220 30% 25%;
+  --muted-foreground: 0 0% 60%;
+  --accent: 0 0% 70%;
+  --accent-foreground: 220 39% 11%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 85%;
+  --border: 220 30% 25%;
+  --input: 220 30% 20%;
+  --ring: 0 0% 75%;
+  --chart-1: 0 0% 75%;
+  --chart-2: 220 50% 45%;
+  --chart-3: 225 50% 35%;
+  --chart-4: 0 0% 65%;
+  --chart-5: 215 50% 50%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Storm Theme - Bold Blue and Gray */
+.storm {
+  --background: 0 0% 15%;
+  --foreground: 0 0% 90%;
+  --card: 0 0% 20%;
+  --card-foreground: 0 0% 90%;
+  --popover: 0 0% 20%;
+  --popover-foreground: 0 0% 90%;
+  --primary: 210 100% 50%;
+  --primary-foreground: 0 0% 15%;
+  --secondary: 0 0% 30%;
+  --secondary-foreground: 0 0% 90%;
+  --muted: 0 0% 25%;
+  --muted-foreground: 0 0% 65%;
+  --accent: 210 100% 60%;
+  --accent-foreground: 0 0% 15%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 90%;
+  --border: 0 0% 35%;
+  --input: 0 0% 25%;
+  --ring: 210 100% 50%;
+  --chart-1: 210 100% 50%;
+  --chart-2: 0 0% 60%;
+  --chart-3: 215 100% 40%;
+  --chart-4: 0 0% 70%;
+  --chart-5: 205 100% 45%;
 }
+
+/* Aurora Theme - Purple and Green */
+.aurora {
+  --background: 270 50% 8%;
+  --foreground: 120 100% 85%;
+  --card: 270 50% 12%;
+  --card-foreground: 120 100% 85%;
+  --popover: 270 50% 12%;
+  --popover-foreground: 120 100% 85%;
+  --primary: 120 100% 50%;
+  --primary-foreground: 270 50% 8%;
+  --secondary: 270 40% 20%;
+  --secondary-foreground: 120 100% 85%;
+  --muted: 270 40% 15%;
+  --muted-foreground: 120 50% 65%;
+  --accent: 270 80% 60%;
+  --accent-foreground: 120 100% 85%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 120 100% 85%;
+  --border: 270 40% 25%;
+  --input: 270 40% 18%;
+  --ring: 120 100% 50%;
+  --chart-1: 120 100% 50%;
+  --chart-2: 270 80% 60%;
+  --chart-3: 125 100% 40%;
+  --chart-4: 275 80% 50%;
+  --chart-5: 115 100% 45%;
+}
+
+
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Theme-aware utility classes */
+.theme-bg {
+  background-color: hsl(var(--background));
+}
+
+.theme-fg {
+  color: hsl(var(--foreground));
+}
+
+.theme-card {
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+}
+
+.theme-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.theme-primary-text {
+  color: hsl(var(--primary));
+}
+
+.theme-secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+.theme-muted {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+}
+
+.theme-muted-text {
+  color: hsl(var(--muted-foreground));
+}
+
+.theme-accent {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+.theme-border {
+  border-color: hsl(var(--border));
+}
+
+.theme-nav {
+  background-color: hsl(var(--card) / 0.8);
+  backdrop-filter: blur(12px);
+  border-color: hsl(var(--border) / 0.1);
+}
+
+.theme-nav-mobile {
+  background-color: hsl(var(--card) / 0.9);
+  border-color: hsl(var(--border) / 0.1);
+}
+
+.theme-button-ghost {
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+}
+
+.theme-button-ghost:hover {
+  background: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+/* Enhanced button contrast for accessibility */
+.theme-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: 2px solid hsl(var(--primary));
+}
+
+.theme-primary:hover {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+  border-color: hsl(var(--accent));
+}
+
+/* Outline button with better contrast */
+.theme-outline-button {
+  background: transparent;
+  color: hsl(var(--primary));
+  border: 2px solid hsl(var(--primary));
+}
+
+.theme-outline-button:hover {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.theme-secondary {
+  background: hsl(var(--muted) / 0.3);
+}
+
+.theme-secondary:hover {
+  background: hsl(var(--muted) / 0.5);
+}
+
+.theme-muted {
+  background: hsl(var(--muted));
+}
+
+.theme-muted-text {
+  color: hsl(var(--muted-foreground));
+}
+
+.theme-chat-bg {
+  background-color: hsl(var(--card) / 0.1);
+  backdrop-filter: blur(12px);
+  border-color: hsl(var(--border) / 0.2);
+}
+
+/* Hero description text with lighter color for better contrast */
+.hero-description-text {
+  color: rgb(142, 142, 142);
 }
