@@ -3,7 +3,8 @@
 /* Sun Theme - Light Blue and Yellow with Better Contrast */
 :root {
   --background: 195 100% 97%;
-  --foreground: 0, 0%, 68%;
+  --foreground: 0 0% 25%;
+  --hero-foreground: 0 0% 75%;
   --card: 195 100% 99%;
   --card-foreground: 220 50% 8%;
   --popover: 195 100% 99%;
@@ -33,6 +34,7 @@
 .dark {
   --background: 220 39% 11%;
   --foreground: 0 0% 85%;
+  --hero-foreground: 0 0% 85%;
   --card: 220 39% 15%;
   --card-foreground: 0 0% 85%;
   --popover: 220 39% 15%;
@@ -61,6 +63,7 @@
 .storm {
   --background: 0 0% 15%;
   --foreground: 0 0% 90%;
+  --hero-foreground: 0 0% 90%;
   --card: 0 0% 20%;
   --card-foreground: 0 0% 90%;
   --popover: 0 0% 20%;
@@ -89,6 +92,7 @@
 .aurora {
   --background: 270 50% 8%;
   --foreground: 120 100% 85%;
+  --hero-foreground: 120 100% 85%;
   --card: 270 50% 12%;
   --card-foreground: 120 100% 85%;
   --popover: 270 50% 12%;
@@ -126,6 +130,10 @@ body {
 
 .theme-fg {
   color: hsl(var(--foreground));
+}
+
+.theme-hero-fg {
+  color: hsl(var(--hero-foreground));
 }
 
 .theme-card {
