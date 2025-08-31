@@ -46,6 +46,13 @@ export default function HomePage() {
     availableVehicles: 234,
   });
 
+  // Randomly select initial theme on client side only
+  useEffect(() => {
+    const themeKeys = Object.keys(themes);
+    const randomTheme = themeKeys[Math.floor(Math.random() * themeKeys.length)];
+    setTheme(randomTheme);
+  }, []);
+
   // Apply theme to document
   useEffect(() => {
     document.documentElement.className = themes[theme].class;
