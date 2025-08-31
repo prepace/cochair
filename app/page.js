@@ -849,7 +849,12 @@ export default function HomePage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
               {/* Jacob L. Baumler */}
-              <div className="theme-card theme-border rounded-xl p-6 shadow-lg backdrop-blur-sm text-center">
+              <a
+                href="https://www.linkedin.com/in/jacoblbaumler/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="theme-card theme-border rounded-xl p-6 shadow-lg backdrop-blur-sm text-center hover:shadow-2xl transition-all duration-500 hover:scale-105 block"
+              >
                 <Image
                   src={jacobBaumlerPhoto}
                   alt="Jacob L. Baumler"
@@ -865,10 +870,15 @@ export default function HomePage() {
                   Serial Entrepreneur, Scalable Growth, Strategic Partnerships,
                   Private Aviation, Emerging Technology, Market Disruption.
                 </p>
-              </div>
+              </a>
 
               {/* Heather Baumler */}
-              <div className="theme-card theme-border rounded-xl p-6 shadow-lg backdrop-blur-sm text-center">
+              <a
+                href="https://www.linkedin.com/in/heather-n-baumler-460a9b7a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="theme-card theme-border rounded-xl p-6 shadow-lg backdrop-blur-sm text-center hover:shadow-2xl transition-all duration-500 hover:scale-105 block"
+              >
                 <Image
                   src={heatherBaumlerPhoto}
                   alt="Heather Baumler"
@@ -884,10 +894,15 @@ export default function HomePage() {
                   20 yrs in Customer Experience, Marketing, & Business
                   Development.
                 </p>
-              </div>
+              </a>
 
               {/* Tom Groom */}
-              <div className="theme-card theme-border rounded-xl p-6 shadow-lg backdrop-blur-sm text-center">
+              <a
+                href="https://www.linkedin.com/in/tomgroom/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="theme-card theme-border rounded-xl p-6 shadow-lg backdrop-blur-sm text-center hover:shadow-2xl transition-all duration-500 hover:scale-105 block"
+              >
                 <Image
                   src={tomGroomPhoto}
                   alt="Tom Groom"
@@ -901,10 +916,15 @@ export default function HomePage() {
                   38 yrs in Technology Leadership, Brand Strategy, Market
                   Expansion, Federal Affairs.
                 </p>
-              </div>
+              </a>
 
               {/* Amie Mayo */}
-              <div className="theme-card theme-border rounded-xl p-6 shadow-lg backdrop-blur-sm text-center">
+              <a
+                href="https://www.linkedin.com/in/amiemayo/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="theme-card theme-border rounded-xl p-6 shadow-lg backdrop-blur-sm text-center hover:shadow-2xl transition-all duration-500 hover:scale-105 block"
+              >
                 <Image
                   src={amieMayoPhoto}
                   alt="Amie Mayo"
@@ -919,7 +939,7 @@ export default function HomePage() {
                   Strategy, MarTech Solutions, Growth Optimization, Industry
                   Innovation.
                 </p>
-              </div>
+              </a>
             </div>
           </motion.div>
         </div>
