@@ -406,7 +406,7 @@ export default function HomePage() {
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl leading-relaxed hero-description-text max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl leading-relaxed theme-fg max-w-4xl mx-auto">
               Beyond private jets. Beyond simple booking. CoachAir is the
               world's first Aviation Intelligence Infrastructure — unifying
               aviation, yachts, vehicles, hotels, high end events and defense
@@ -415,7 +415,7 @@ export default function HomePage() {
               protection.
             </p>
 
-            <p className="text-lg md:text-xl leading-relaxed hero-description-text max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl leading-relaxed theme-fg max-w-4xl mx-auto">
               CoachAir Aviation Intelligence is making it so brokers, operators,
               and FBOs have the tools to elevate passengers' booking process
               with a private labeled mobile app so they can search, book, and
@@ -443,7 +443,7 @@ export default function HomePage() {
                 alt="CoachAir Aviation Intelligence"
                 width={299}
                 height={448}
-                className="h-64 md:h-80 lg:h-96 xl:h-[28rem] mx-auto"
+                className="w-auto aspect-[299/448] mx-auto"
               />
             </motion.div>
 

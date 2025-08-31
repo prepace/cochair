@@ -3,7 +3,7 @@
 /* Sun Theme - Light Blue and Yellow with Better Contrast */
 :root {
   --background: 195 100% 97%;
-  --foreground: 0 0% 25%;
+  --foreground: 0, 0%, 68%;
   --card: 195 100% 99%;
   --card-foreground: 220 50% 8%;
   --popover: 195 100% 99%;
