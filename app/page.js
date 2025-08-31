@@ -742,7 +742,7 @@ export default function HomePage() {
             className="text-center space-y-8"
           >
             <h2 className="text-3xl md:text-5xl font-bold leading-tight theme-fg">
-              Proud Member of
+              Team Member Affiliations
             </h2>
             <div className="flex flex-wrap justify-center items-center gap-8">
               <a
