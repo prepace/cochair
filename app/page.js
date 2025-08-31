@@ -18,9 +18,9 @@ const coachairShieldBadge = "/assets/coachair-shield-badge.png";
 // Removed unused variable: coachairGoldenLogo
 const coachairGoldenTransparent = "/assets/coachair-golden-transparent.png";
 const jacobBaumlerPhoto = "/assets/JacobBaumler.JPG";
-const amieMayoPhoto = "/assets/AmieMayo.jfif";
-const heatherBaumlerPhoto = "/assets/HeatherBaumler.jfif";
-const tomGroomPhoto = "/assets/TomGroom.jfif";
+const amieMayoPhoto = "/assets/AmieMayo.webp";
+const heatherBaumlerPhoto = "/assets/HeatherBaumler.webp";
+const tomGroomPhoto = "/assets/TomGroom.webp";
 
 // Theme configurations
 const themes = {
@@ -86,11 +86,11 @@ export default function HomePage() {
 
     useEffect(() => {
       if (!text) return;
-      
+
       setDisplayText('');
       setIsComplete(false);
       let i = 0;
-      
+
       const timer = setInterval(() => {
         if (i < text.length) {
           setDisplayText(text.slice(0, i + 2));
@@ -295,7 +295,7 @@ export default function HomePage() {
                 Get instant answers about CoachAir's aviation intelligence
                 platform, pricing, partnerships, and more.
               </p>
-              
+
               {chatbotView === 'questions' ? (
                 <div className="space-y-2">
                   <button
@@ -338,7 +338,7 @@ export default function HomePage() {
                         setChatbotView('questions');
                         setSelectedQuestion(null);
                       }}
-                        className="hero-description-text hover:theme-fg transition-colors p-1 rounded"
+                      className="hero-description-text hover:theme-fg transition-colors p-1 rounded"
                     >
                       <ChevronLeft size={16} />
                     </button>
