@@ -3,15 +3,16 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Bot, ChevronLeft, CloudRain, Menu, MessageCircle, Moon, Sparkles, Sun, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 // Asset paths (using public directory approach for better NextJS compatibility)
 const heroComposite = "/assets/hero_composite.png";
 // Removed unused variable: aviationBackground
-const platformIconAviation = "/assets/platform_icon_aviation.png";
+// const platformIconAviation = "/assets/platform_icon_aviation.png";
 const platformIconYacht = "/assets/platform_icon_yacht.png";
 const platformIconVehicle = "/assets/platform_icon_vehicle.png";
-const platformIconDefense = "/assets/platform_icon_defense.png";
+// const platformIconDefense = "/assets/platform_icon_defense.png";
 const coachairShield = "/assets/coachair-shield.png";
 // Removed unused variables: phoenixLogo, coachairFullLogo
 const coachairShieldBadge = "/assets/coachair-shield-badge.png";
@@ -47,11 +48,11 @@ export default function HomePage() {
   });
 
   // Randomly select initial theme on client side only
-  useEffect(() => {
-    const themeKeys = Object.keys(themes);
-    const randomTheme = themeKeys[Math.floor(Math.random() * themeKeys.length)];
-    setTheme(randomTheme);
-  }, []);
+  // useEffect(() => {
+  //   const themeKeys = Object.keys(themes);
+  //   const randomTheme = themeKeys[Math.floor(Math.random() * themeKeys.length)];
+  //   setTheme(randomTheme);
+  // }, []);
 
   // Apply theme to document
   useEffect(() => {
@@ -150,38 +151,38 @@ export default function HomePage() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <a
+              <Link
                 href="#platform"
                 className="theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
               >
                 Platform
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#capabilities"
                 className="theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
               >
                 Capabilities
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#team"
                 className="theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
               >
                 Team
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#investors"
                 className="theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
               >
                 Investors
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://calendly.com/jacob-baumler-gocoachair/1hour"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-primary font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 Schedule Call
-              </a>
+              </Link>
             </div>
 
             {/* Theme Toggle */}
@@ -220,38 +221,38 @@ export default function HomePage() {
               className="md:hidden theme-nav-mobile border-t theme-border"
             >
               <div className="px-4 py-4 space-y-4">
-                <a
+                <Link
                   href="#platform"
                   className="block theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
                 >
                   Platform
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#capabilities"
                   className="block theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
                 >
                   Capabilities
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#team"
                   className="block theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
                 >
                   Team
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#investors"
                   className="block theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
                 >
                   Investors
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://calendly.com/jacob-baumler-gocoachair/1hour"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full theme-primary font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-center"
                 >
                   Schedule Call
-                </a>
+                </Link>
               </div>
             </motion.div>
           )}
@@ -364,15 +365,15 @@ export default function HomePage() {
                 </div>
               )}
               <div className="mt-4 pt-3 border-t theme-border">
-                <a
+                <Link
                   href="https://calendly.com/jacob-baumler-gocoachair/1hour"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center theme-primary font-semibold px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-sm"
                 >
                   <MessageCircle size={16} className="mr-2" />
-                  Schedule Live Demo
-                </a>
+                  Schedule a Call
+                </Link>
               </div>
             </motion.div>
           )}
@@ -397,29 +398,24 @@ export default function HomePage() {
             transition={{ duration: 1 }}
             className="space-y-8"
           >
-            <div className="text-2xl md:text-3xl font-bold theme-primary-text mb-4 pt-20">
-              MAKE AVIATION GREAT AGAIN
-            </div>
-
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight theme-fg">
+            <h1 className="mt-16 text-5xl md:text-7xl font-bold leading-tight theme-fg">
               <span className="theme-primary-text">CoachAir</span>
               <br />
               <span className="theme-primary-text">
                 Aviation Intelligence
               </span>
               <br />
-              <span className="text-3xl md:text-4xl theme-muted-text">
+              <span className="text-3xl md:text-4xl theme-accent">
                 Infrastructure as a Service - AI for General Aviation
               </span>
             </h1>
 
             <p className="text-lg md:text-xl leading-relaxed theme-hero-fg max-w-4xl mx-auto">
               Beyond private jets. Beyond simple booking. CoachAir is the
-              world's first Aviation Intelligence Infrastructure — unifying
-              aviation, yachts, vehicles, hotels, high end events and defense
-              with patent-pending AI that eliminates illegal charters, automates
-              FAA compliance, and secures every transaction with escrow
-              protection.
+              world's first Aviation Intelligence Infrastructure — unifying private aviation,
+              urban air mobility, medvac, yachts, vehicles, hotels, high end events and defense
+              with patent-pending AI that eliminates illegal charters, automates FAA compliance,
+              and secures every transaction with escrow protection.
             </p>
 
             <p className="text-lg md:text-xl leading-relaxed theme-hero-fg max-w-4xl mx-auto">
@@ -455,7 +451,7 @@ export default function HomePage() {
             </motion.div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <Link
                 href="https://calendly.com/jacob-baumler-gocoachair/1hour"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -463,15 +459,15 @@ export default function HomePage() {
               >
                 Schedule a Call
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.canva.com/design/DAGtiPc1dP0/bZc68s7R_4V_6yZkMwTcwg/view?utm_content=DAGtiPc1dP0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hcef55243d2"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-outline-button font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 View Investor Deck
-              </a>
+              </Link>
             </div>
           </motion.div>
 
@@ -550,10 +546,6 @@ export default function HomePage() {
               <li>Escrow-secured booking and payments for every service</li>
               <li>AI-powered dispatch + compliance automation</li>
               <li>White-labeled tools for brokers, operators, and FBOs</li>
-              <li>
-                Multiple revenue streams: Aviation, Yachts, Vehicles, Hotels,
-                Events
-              </li>
               <li>Fraud prevention and data accuracy across all platforms</li>
               <li>Built for Urban Air Mobility and global expansion</li>
             </ul>
@@ -609,7 +601,7 @@ export default function HomePage() {
               </div>
 
               <div className="theme-card border theme-border rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 backdrop-blur-sm text-center">
-                <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 theme-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-sm">DOD</span>
                 </div>
                 <h3 className="text-xl font-bold theme-fg mb-2">Defense</h3>
@@ -637,7 +629,7 @@ export default function HomePage() {
             className="text-center space-y-8"
           >
             <h2 className="text-3xl md:text-5xl font-bold leading-tight theme-fg">
-              Platform Capabilities
+              Future Platform Capabilities
             </h2>
             <p className="text-lg md:text-xl leading-relaxed theme-muted-text max-w-4xl mx-auto">
               Comprehensive AI-powered solutions across multiple transportation
@@ -645,7 +637,7 @@ export default function HomePage() {
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="theme-card border theme-border rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 backdrop-blur-sm text-center">
+              {/* <div className="theme-card border theme-border rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 backdrop-blur-sm text-center">
                 <Image
                   src={platformIconAviation}
                   alt="Aviation AI"
@@ -679,7 +671,7 @@ export default function HomePage() {
                   defense, and emergency medical transportation with
                   NDA-protected protocols.
                 </p>
-              </div>
+              </div> */}
 
               <div className="theme-card border theme-border rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 backdrop-blur-sm text-center">
                 <Image
@@ -752,86 +744,86 @@ export default function HomePage() {
               Team Member Affiliations
             </h2>
             <div className="flex flex-wrap justify-center items-center gap-8">
-              <a
+              <Link
                 href="http://eliances.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
               >
                 Eliances
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.aopa.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
               >
                 AOPA
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.eaa.org/eaa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
               >
                 EAA
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://flyingovertime.org/mission/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
               >
                 FOT
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.mbaa-mn.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
               >
                 MBAA
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://mnpilots.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
               >
                 MNPA
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://naa.aero/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
               >
                 NAA
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://nata.aero/about/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
               >
                 NATA
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://nbaa.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
               >
                 NBAA
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.linkedin.com/groups/14530021/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
               >
                 TCAN
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -856,7 +848,7 @@ export default function HomePage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
               {/* Jacob L. Baumler */}
-              <a
+              <Link
                 href="https://www.linkedin.com/in/jacoblbaumler/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -877,10 +869,10 @@ export default function HomePage() {
                   Serial Entrepreneur, Scalable Growth, Strategic Partnerships,
                   Private Aviation, Emerging Technology, Market Disruption.
                 </p>
-              </a>
+              </Link>
 
               {/* Heather Baumler */}
-              <a
+              <Link
                 href="https://www.linkedin.com/in/heather-n-baumler-460a9b7a/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -901,10 +893,10 @@ export default function HomePage() {
                   20 yrs in Customer Experience, Marketing, & Business
                   Development.
                 </p>
-              </a>
+              </Link>
 
               {/* Tom Groom */}
-              <a
+              <Link
                 href="https://www.linkedin.com/in/tomgroom/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -923,10 +915,10 @@ export default function HomePage() {
                   38 yrs in Technology Leadership, Brand Strategy, Market
                   Expansion, Federal Affairs.
                 </p>
-              </a>
+              </Link>
 
               {/* Amie Mayo */}
-              <a
+              <Link
                 href="https://www.linkedin.com/in/amiemayo/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -946,7 +938,7 @@ export default function HomePage() {
                   Strategy, MarTech Solutions, Growth Optimization, Industry
                   Innovation.
                 </p>
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -1021,7 +1013,7 @@ export default function HomePage() {
               industry has been missing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <a
+              <Link
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfYEvbQ_BBUa5au5auaRyNPtEFVZyFGReJlasxK2-Wj_o3IRg/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -1029,23 +1021,23 @@ export default function HomePage() {
               >
                 Engage Now
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.canva.com/design/DAGtiPc1dP0/bZc68s7R_4V_6yZkMwTcwg/view?utm_content=DAGtiPc1dP0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hcef55243d2"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 theme-border theme-primary-text font-semibold px-8 py-4 rounded-lg hover:theme-primary hover:theme-primary-text transition-all duration-300"
               >
                 View Full Investor Deck
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.canva.com/design/DAGup29jENo/XvB75qCsSPO4pUyAVRl8_Q/view?utm_content=DAGup29jENo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h17406cd711"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 theme-border theme-primary-text font-semibold px-8 py-4 rounded-lg hover:theme-primary hover:theme-primary-text transition-all duration-300"
               >
                 View 1 Page Investor Summary
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -1068,7 +1060,7 @@ export default function HomePage() {
               transform your operations.
             </p>
             <div className="flex justify-center mt-8">
-              <a
+              <Link
                 href="https://www.canva.com/design/DAGup7yN2Nc/FxzPg6xn1aztHRQoFPQQ9g/view?utm_content=DAGup7yN2Nc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2ccb0947e5"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -1076,7 +1068,7 @@ export default function HomePage() {
               >
                 View Customer Summary
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -1098,7 +1090,7 @@ export default function HomePage() {
               Let's build the aviation future together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <a
+              <Link
                 href="https://www.linkedin.com/company/coachairai/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -1106,23 +1098,23 @@ export default function HomePage() {
               >
                 Follow us on LinkedIn
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.linkedin.com/newsletters/7351363309914238978/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 theme-border theme-primary-text font-semibold px-8 py-4 rounded-lg hover:theme-primary hover:theme-primary-text transition-all duration-300"
               >
                 Subscribe to our Newsletter
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://calendly.com/jacob-baumler-gocoachair/1hour"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 theme-border theme-primary-text font-semibold px-8 py-4 rounded-lg hover:theme-primary hover:theme-primary-text transition-all duration-300"
               >
                 Book a Meeting
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -1149,60 +1141,38 @@ export default function HomePage() {
             <div className="space-y-4">
               <h3 className="text-lg font-semibold theme-fg">Platform</h3>
               <div className="space-y-2">
-                <a
+                <Link
                   href="#platform"
                   className="block theme-muted-text hover:theme-primary-text transition-colors duration-300"
                 >
                   Aviation AI
-                </a>
-                <a
-                  href="#platform"
-                  className="block theme-muted-text hover:theme-primary-text transition-colors duration-300"
-                >
-                  Maritime Intelligence
-                </a>
-                <a
-                  href="#platform"
-                  className="block theme-muted-text hover:theme-primary-text transition-colors duration-300"
-                >
-                  Ground Transport
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#platform"
                   className="block theme-muted-text hover:theme-primary-text transition-colors duration-300"
                 >
                   Defense Solutions
-                </a>
+                </Link>
               </div>
             </div>
 
             <div className="space-y-4">
               <h3 className="text-lg font-semibold theme-fg">Company</h3>
               <div className="space-y-2">
-                <a
+                <Link
+                  href="https://forms.gle/rhEQFKrbD2xvnPKv5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block theme-muted-text hover:theme-primary-text transition-colors duration-300"
+                >
+                  Contact Us
+                </Link>
+                <Link
                   href="#team"
                   className="block theme-muted-text hover:theme-primary-text transition-colors duration-300"
                 >
-                  About
-                </a>
-                <a
-                  href="#team"
-                  className="block theme-muted-text hover:theme-primary-text transition-colors duration-300"
-                >
-                  Careers
-                </a>
-                <a
-                  href="#memberships"
-                  className="block theme-muted-text hover:theme-primary-text transition-colors duration-300"
-                >
-                  Press
-                </a>
-                <a
-                  href="#contact"
-                  className="block theme-muted-text hover:theme-primary-text transition-colors duration-300"
-                >
-                  Contact
-                </a>
+                  Meet the Team
+                </Link>
               </div>
             </div>
 
@@ -1212,14 +1182,14 @@ export default function HomePage() {
                 <p className="theme-muted-text">Jacob L. Baumler, Founder & CEO</p>
                 <p className="theme-muted-text">320-287-0021</p>
                 <p className="theme-muted-text">jacob.baumler@gocoachair.com</p>
-                <a
+                <Link
                   href="https://www.gocoachair.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="theme-primary-text hover:theme-primary transition-colors duration-300"
                 >
                   www.gocoachair.com
-                </a>
+                </Link>
               </div>
             </div>
           </div>

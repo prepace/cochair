@@ -2,18 +2,18 @@
 
 /* Sun Theme - Light Blue and Yellow with Better Contrast */
 :root {
-  --background: 195 100% 97%;
+  --background: 0 0% 100%;
   --foreground: 0 0% 25%;
   --hero-foreground: 0 0% 75%;
   --card: 195 100% 99%;
   --card-foreground: 220 50% 8%;
   --popover: 195 100% 99%;
   --popover-foreground: 220 50% 8%;
-  --primary: 45 100% 35%;
+  --primary: 36 87% 42%;
   --primary-foreground: 0 0% 100%;
   --secondary: 195 100% 85%;
   --secondary-foreground: 220 50% 8%;
-  --muted: 195 100% 90%;
+  --muted: 0 0% 95%;
   --muted-foreground: 0 0% 45%;
   --accent: 0 0% 75%;
   --accent-foreground: 0 0% 100%;
@@ -21,8 +21,8 @@
   --destructive-foreground: 210 40% 98%;
   --border: 195 50% 75%;
   --input: 195 50% 85%;
-  --ring: 45 100% 35%;
-  --chart-1: 45 100% 35%;
+  --ring: 36 87% 42%;
+  --chart-1: 36 87% 42%;
   --chart-2: 195 100% 45%;
   --chart-3: 200 100% 35%;
   --chart-4: 50 100% 40%;
@@ -165,7 +165,7 @@ body {
 }
 
 .theme-accent {
-  background-color: hsl(var(--accent));
+  /* background-color: hsl(var(--accent)); */
   color: hsl(var(--accent-foreground));
 }
 
