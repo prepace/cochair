@@ -186,8 +186,8 @@ export default function HomePage() {
             </div>
 
             {/* Theme Toggle */}
-            <div className="flex items-center space-x-2">
-              {Object.entries(themes).map(([key, { icon: Icon, label }]) => (
+            <div className="md:hidden flex items-center space-x-2">
+              {/* {Object.entries(themes).map(([key, { icon: Icon, label }]) => (
                 <button
                   key={key}
                   type="button"
@@ -197,7 +197,7 @@ export default function HomePage() {
                 >
                   <Icon size={16} />
                 </button>
-              ))}
+              ))} */}
 
               {/* Mobile Menu Toggle */}
               <button
@@ -398,7 +398,7 @@ export default function HomePage() {
             transition={{ duration: 1 }}
             className="space-y-8"
           >
-            <h1 className="mt-16 text-5xl md:text-7xl font-bold leading-tight theme-fg">
+            <h1 className="mt-24 text-5xl md:text-7xl font-bold leading-tight theme-fg">
               <span className="theme-primary-text">CoachAir</span>
               <br />
               <span className="theme-primary-text">
