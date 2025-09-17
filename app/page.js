@@ -553,7 +553,7 @@ export default function HomePage() {
             {/* Client-Specific Value Props */}
             <div className="grid md:grid-cols-5 gap-6 mt-12">
               <div className="theme-card border theme-border rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 backdrop-blur-sm text-center">
-                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 theme-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-sm">BR</span>
                 </div>
                 <h3 className="text-xl font-bold theme-fg mb-2">Brokers</h3>
@@ -565,7 +565,7 @@ export default function HomePage() {
               </div>
 
               <div className="theme-card border theme-border rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 backdrop-blur-sm text-center">
-                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 theme-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-sm">OP</span>
                 </div>
                 <h3 className="text-xl font-bold theme-fg mb-2">Operators</h3>
@@ -577,7 +577,7 @@ export default function HomePage() {
               </div>
 
               <div className="theme-card border theme-border rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 backdrop-blur-sm text-center">
-                <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 theme-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-sm">FBO</span>
                 </div>
                 <h3 className="text-xl font-bold theme-fg mb-2">FBOs</h3>
@@ -589,7 +589,7 @@ export default function HomePage() {
               </div>
 
               <div className="theme-card border theme-border rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 backdrop-blur-sm text-center">
-                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 theme-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-sm">MED</span>
                 </div>
                 <h3 className="text-xl font-bold theme-fg mb-2">Medevac</h3>
