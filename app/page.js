@@ -477,14 +477,14 @@ export default function HomePage() {
                 Schedule a Call
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
+              {/* <Link
                 href="https://www.canva.com/design/DAGtiPc1dP0/bZc68s7R_4V_6yZkMwTcwg/view?utm_content=DAGtiPc1dP0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hcef55243d2"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-outline-button font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 View Investor Deck
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
 
