@@ -1,7 +1,18 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Bot, ChevronLeft, CloudRain, Menu, MessageCircle, Moon, Sparkles, Sun, X } from "lucide-react";
+import {
+  ArrowRight,
+  Bot,
+  ChevronLeft,
+  CloudRain,
+  Menu,
+  MessageCircle,
+  Moon,
+  Sparkles,
+  Sun,
+  X,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -32,10 +43,10 @@ const themes = {
 };
 
 export default function HomePage() {
-  const [theme, setTheme] = useState("day");
+  const [theme, _setTheme] = useState("day");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showAIChat, setShowAIChat] = useState(false);
-  const [chatbotView, setChatbotView] = useState('questions'); // 'questions' or 'answer'
+  const [chatbotView, setChatbotView] = useState("questions"); // 'questions' or 'answer'
   const [selectedQuestion, setSelectedQuestion] = useState(null);
 
   // Live metrics with animated counters
@@ -89,13 +100,13 @@ export default function HomePage() {
 
   // Typewriter animation hook
   const useTypewriter = (text, speed = 50) => {
-    const [displayText, setDisplayText] = useState('');
+    const [displayText, setDisplayText] = useState("");
     const [isComplete, setIsComplete] = useState(false);
 
     useEffect(() => {
       if (!text) return;
 
-      setDisplayText('');
+      setDisplayText("");
       setIsComplete(false);
       let i = 0;
 
@@ -117,17 +128,20 @@ export default function HomePage() {
 
   // Predefined answers for chatbot questions
   const chatbotAnswers = {
-    "How does CoachAir eliminate illegal charters?": "CoachAir uses advanced AI verification to ensure all aircraft operators have proper certifications, insurance, and regulatory compliance. Our platform cross-references multiple databases in real-time to verify legitimacy and prevent illegal charter operations from accessing our network.",
-    "What are the partnership opportunities?": "We offer white-label solutions for FBOs, charter operators, and aviation service providers. Partners can integrate our AI platform into their existing operations, expand their service offerings, and access our network of verified operators while maintaining their brand identity.",
-    "Tell me about white-label solutions": "Our white-label platform allows partners to offer CoachAir's aviation intelligence under their own brand. This includes custom branding, integrated booking systems, concierge services, and access to our verified network of aircraft and operators."
+    "How does CoachAir eliminate illegal charters?":
+      "CoachAir uses advanced AI verification to ensure all aircraft operators have proper certifications, insurance, and regulatory compliance. Our platform cross-references multiple databases in real-time to verify legitimacy and prevent illegal charter operations from accessing our network.",
+    "What are the partnership opportunities?":
+      "We offer white-label solutions for FBOs, charter operators, and aviation service providers. Partners can integrate our AI platform into their existing operations, expand their service offerings, and access our network of verified operators while maintaining their brand identity.",
+    "Tell me about white-label solutions":
+      "Our white-label platform allows partners to offer CoachAir's aviation intelligence under their own brand. This includes custom branding, integrated booking systems, concierge services, and access to our verified network of aircraft and operators.",
   };
 
   // Get current answer text for typewriter animation
-  const currentAnswerText = selectedQuestion ? chatbotAnswers[selectedQuestion] : '';
-  const { displayText: typewriterText, isComplete: typewriterComplete } = useTypewriter(
-    chatbotView === 'answer' ? currentAnswerText : '',
-    10
-  );
+  const currentAnswerText = selectedQuestion
+    ? chatbotAnswers[selectedQuestion]
+    : "";
+  const { displayText: typewriterText, isComplete: typewriterComplete } =
+    useTypewriter(chatbotView === "answer" ? currentAnswerText : "", 10);
 
   return (
     <div className="min-h-screen theme-bg theme-fg">
@@ -304,66 +318,70 @@ export default function HomePage() {
                 platform, pricing, partnerships, and more.
               </p>
 
-              {chatbotView === 'questions' ? (
-                <div className="space-y-2">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSelectedQuestion("How does CoachAir eliminate illegal charters?");
-                      setChatbotView('answer');
-                    }}
-                    className="w-full text-left theme-secondary hover:theme-muted border theme-border rounded-lg p-3 text-sm theme-fg transition-all duration-300"
-                  >
-                    "How does CoachAir eliminate illegal charters?"
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSelectedQuestion("What are the partnership opportunities?");
-                      setChatbotView('answer');
-                    }}
-                    className="w-full text-left theme-secondary hover:theme-muted border theme-border rounded-lg p-3 text-sm theme-fg transition-all duration-300"
-                  >
-                    "What are the partnership opportunities?"
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSelectedQuestion("Tell me about white-label solutions");
-                      setChatbotView('answer');
-                    }}
-                    className="w-full text-left theme-secondary hover:theme-muted border theme-border rounded-lg p-3 text-sm theme-fg transition-all duration-300"
-                  >
-                    "Tell me about white-label solutions"
-                  </button>
-                </div>
-              ) : (
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-2 mb-3">
+              {chatbotView === "questions"
+                ? <div className="space-y-2">
                     <button
                       type="button"
                       onClick={() => {
-                        setChatbotView('questions');
-                        setSelectedQuestion(null);
+                        setSelectedQuestion(
+                          "How does CoachAir eliminate illegal charters?",
+                        );
+                        setChatbotView("answer");
                       }}
-                      className="hero-description-text hover:theme-fg transition-colors p-1 rounded"
+                      className="w-full text-left theme-secondary hover:theme-muted border theme-border rounded-lg p-3 text-sm theme-fg transition-all duration-300"
                     >
-                      <ChevronLeft size={16} />
+                      "How does CoachAir eliminate illegal charters?"
                     </button>
-                    <span className="text-sm font-medium hero-description-text">
-                      {selectedQuestion}
-                    </span>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSelectedQuestion(
+                          "What are the partnership opportunities?",
+                        );
+                        setChatbotView("answer");
+                      }}
+                      className="w-full text-left theme-secondary hover:theme-muted border theme-border rounded-lg p-3 text-sm theme-fg transition-all duration-300"
+                    >
+                      "What are the partnership opportunities?"
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSelectedQuestion(
+                          "Tell me about white-label solutions",
+                        );
+                        setChatbotView("answer");
+                      }}
+                      className="w-full text-left theme-secondary hover:theme-muted border theme-border rounded-lg p-3 text-sm theme-fg transition-all duration-300"
+                    >
+                      "Tell me about white-label solutions"
+                    </button>
                   </div>
-                  <div className="theme-secondary border theme-border rounded-lg p-4 min-h-[120px]">
-                    <p className="text-sm theme-fg leading-relaxed">
-                      {typewriterText}
-                      {!typewriterComplete && (
-                        <span className="animate-pulse">|</span>
-                      )}
-                    </p>
-                  </div>
-                </div>
-              )}
+                : <div className="space-y-4">
+                    <div className="flex items-center space-x-2 mb-3">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setChatbotView("questions");
+                          setSelectedQuestion(null);
+                        }}
+                        className="hero-description-text hover:theme-fg transition-colors p-1 rounded"
+                      >
+                        <ChevronLeft size={16} />
+                      </button>
+                      <span className="text-sm font-medium hero-description-text">
+                        {selectedQuestion}
+                      </span>
+                    </div>
+                    <div className="theme-secondary border theme-border rounded-lg p-4 min-h-[120px]">
+                      <p className="text-sm theme-fg leading-relaxed">
+                        {typewriterText}
+                        {!typewriterComplete && (
+                          <span className="animate-pulse">|</span>
+                        )}
+                      </p>
+                    </div>
+                  </div>}
               <div className="mt-4 pt-3 border-t theme-border">
                 <Link
                   href="https://calendly.com/jacob-baumler-gocoachair/1hour"
@@ -401,9 +419,7 @@ export default function HomePage() {
             <h1 className="mt-24 text-5xl md:text-7xl font-bold leading-tight theme-fg">
               <span className="theme-primary-text">CoachAir</span>
               <br />
-              <span className="theme-primary-text">
-                Aviation Intelligence
-              </span>
+              <span className="theme-primary-text">Aviation Intelligence</span>
               <br />
               <span className="text-3xl md:text-4xl theme-accent">
                 Infrastructure as a Service - AI for General Aviation
@@ -412,10 +428,11 @@ export default function HomePage() {
 
             <p className="text-lg md:text-xl leading-relaxed theme-hero-fg max-w-4xl mx-auto">
               Beyond private jets. Beyond simple booking. CoachAir is the
-              world's first Aviation Intelligence Infrastructure — unifying private aviation,
-              urban air mobility, medvac, yachts, vehicles, hotels, high end events and defense
-              with patent-pending AI that eliminates illegal charters, automates FAA compliance,
-              and secures every transaction with escrow protection.
+              world's first Aviation Intelligence Infrastructure — unifying
+              private aviation, urban air mobility, medvac, yachts, vehicles,
+              hotels, high end events and defense with patent-pending AI that
+              eliminates illegal charters, automates FAA compliance, and secures
+              every transaction with escrow protection.
             </p>
 
             <p className="text-lg md:text-xl leading-relaxed theme-hero-fg max-w-4xl mx-auto">
@@ -979,10 +996,7 @@ export default function HomePage() {
       </section>
 
       {/* For Investors Section */}
-      <section
-        id="investors"
-        className="py-20 px-4 md:px-8 lg:px-16 theme-bg"
-      >
+      <section id="investors" className="py-20 px-4 md:px-8 lg:px-16 theme-bg">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -1022,7 +1036,7 @@ export default function HomePage() {
                 Engage Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
+              {/* <Link
                 href="https://www.canva.com/design/DAGtiPc1dP0/bZc68s7R_4V_6yZkMwTcwg/view?utm_content=DAGtiPc1dP0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hcef55243d2"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -1037,7 +1051,7 @@ export default function HomePage() {
                 className="border-2 theme-border theme-primary-text font-semibold px-8 py-4 rounded-lg hover:theme-primary hover:theme-primary-text transition-all duration-300"
               >
                 View 1 Page Investor Summary
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
         </div>
@@ -1061,12 +1075,12 @@ export default function HomePage() {
             </p>
             <div className="flex justify-center mt-8">
               <Link
-                href="https://www.canva.com/design/DAGup7yN2Nc/FxzPg6xn1aztHRQoFPQQ9g/view?utm_content=DAGup7yN2Nc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2ccb0947e5"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfYEvbQ_BBUa5au5auaRyNPtEFVZyFGReJlasxK2-Wj_o3IRg/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-primary theme-primary-text font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
               >
-                View Customer Summary
+                Request Customer Summary
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
@@ -1179,7 +1193,9 @@ export default function HomePage() {
             <div className="space-y-4">
               <h3 className="text-lg font-semibold theme-fg">Contact</h3>
               <div className="space-y-2">
-                <p className="theme-muted-text">Jacob L. Baumler, Founder & CEO</p>
+                <p className="theme-muted-text">
+                  Jacob L. Baumler, Founder & CEO
+                </p>
                 <p className="theme-muted-text">320-287-0021</p>
                 <p className="theme-muted-text">jacob.baumler@gocoachair.com</p>
                 <Link
