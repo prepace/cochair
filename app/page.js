@@ -1028,7 +1028,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Link
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfYEvbQ_BBUa5au5auaRyNPtEFVZyFGReJlasxK2-Wj_o3IRg/viewform"
+                href="https://share-na2.hsforms.com/190W3q2DtQHeheL4PIQIscA40l7ov"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-primary theme-primary-text font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
@@ -1075,7 +1075,7 @@ export default function HomePage() {
             </p>
             <div className="flex justify-center mt-8">
               <Link
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfYEvbQ_BBUa5au5auaRyNPtEFVZyFGReJlasxK2-Wj_o3IRg/viewform"
+                href="https://share-na2.hsforms.com/190W3q2DtQHeheL4PIQIscA40l7ov"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-primary theme-primary-text font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
@@ -1174,7 +1174,7 @@ export default function HomePage() {
               <h3 className="text-lg font-semibold theme-fg">Company</h3>
               <div className="space-y-2">
                 <Link
-                  href="https://forms.gle/rhEQFKrbD2xvnPKv5"
+                  href="https://share-na2.hsforms.com/190W3q2DtQHeheL4PIQIscA40l7ov"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block theme-muted-text hover:theme-primary-text transition-colors duration-300"
