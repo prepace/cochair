@@ -863,7 +863,7 @@ export default function HomePage() {
               technology, and business development.
             </p>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+            <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-8 mt-12">
               {/* Jacob L. Baumler */}
               <Link
                 href="https://www.linkedin.com/in/jacoblbaumler/"
@@ -935,7 +935,7 @@ export default function HomePage() {
               </Link>
 
               {/* Amie Mayo */}
-              <Link
+              {/* <Link
                 href="https://www.linkedin.com/in/amiemayo/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -955,7 +955,7 @@ export default function HomePage() {
                   Strategy, MarTech Solutions, Growth Optimization, Industry
                   Innovation.
                 </p>
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
         </div>
