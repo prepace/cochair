@@ -285,10 +285,6 @@ export default function HomePage() {
               fly in under 60 seconds!
             </p>
 
-            <p className="text-xl md:text-2xl font-semibold text-red-400 mt-8">
-              Eliminating 40% of illegal charters and $1B in fraud.
-            </p>
-
             <p className="text-xl md:text-2xl font-semibold theme-primary-text mt-8">
               Built for Compliance. Designed for Scale. Powered with
               Intelligence.
