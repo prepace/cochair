@@ -61,6 +61,12 @@ export default function Navbar() {
               Investors
             </Link>
             <Link
+              href="/#media"
+              className="theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
+            >
+              Media
+            </Link>
+            <Link
                 href="/learn"
                 className="theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
             >
@@ -126,6 +132,13 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Investors
+              </Link>
+              <Link
+                href="/#media"
+                className="block theme-fg hover:theme-primary-text transition-colors duration-300 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Media
               </Link>
               <Link
                 href="/learn"

@@ -927,6 +927,84 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Media Section */}
+      <section id="media" className="py-20 px-4 md:px-8 lg:px-16 theme-surface">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-12"
+          >
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl md:text-5xl font-bold leading-tight theme-fg">
+                Media
+              </h2>
+              <p className="text-lg md:text-xl leading-relaxed theme-muted-text max-w-3xl mx-auto">
+                CoachAir in the news and industry press.
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <iframe
+                title="CoachAir Overview"
+                src="https://player.mux.com/5ADCjAk00pxkceC2Ek948B02phSF7KgGajNCiMRa2iYPo?metadata-video-title=CoachAir&video-title=CoachAir"
+                style={{ width: "100%", border: "none", aspectRatio: "16/9" }}
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowFullScreen
+                className="rounded-xl shadow-2xl"
+              />
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <a
+                href="https://www.corporatejetinvestor.com/news/coachair-one-mans-mission-to-dent-illegal-charter-operations/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-xl overflow-hidden theme-card border theme-border hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]"
+              >
+                <div className="relative aspect-video overflow-hidden">
+                  <Image
+                    src="https://www.corporatejetinvestor.com/wp-content/uploads/2026/02/coachair-image.jpg"
+                    alt="One man's mission to dent illegal charter operations"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-5 space-y-2">
+                  <p className="text-xs font-semibold uppercase tracking-wider theme-primary-text">Corporate Jet Investor</p>
+                  <h3 className="font-bold theme-fg group-hover:theme-primary-text transition-colors duration-200 leading-snug">
+                    One man&apos;s mission to dent illegal charter operations
+                  </h3>
+                </div>
+              </a>
+
+              <a
+                href="https://nbaa.org/aircraft-operations/safety/safety-through-innovation/safety-through-innovation-how-ai-is-combating-illegal-unsafe-charter-flights/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-xl overflow-hidden theme-card border theme-border hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]"
+              >
+                <div className="relative aspect-video overflow-hidden">
+                  <Image
+                    src="https://nbaa.org/wp-content/uploads/2026/04/jet-ramp-passengers-bourding-drawing-cyber.jpg"
+                    alt="Safety Through Innovation: How AI Is Combating Illegal, Unsafe Charter Flights"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-5 space-y-2">
+                  <p className="text-xs font-semibold uppercase tracking-wider theme-primary-text">NBAA</p>
+                  <h3 className="font-bold theme-fg group-hover:theme-primary-text transition-colors duration-200 leading-snug">
+                    Safety Through Innovation: How AI Is Combating Illegal, Unsafe Charter Flights
+                  </h3>
+                </div>
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Stay Connected Section */}
       <section className="py-20 px-4 md:px-8 lg:px-16 theme-bg">
         <div className="max-w-7xl mx-auto">
