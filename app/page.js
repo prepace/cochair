@@ -945,15 +945,27 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="max-w-4xl mx-auto">
-              <iframe
-                title="CoachAir Overview"
-                src="https://player.mux.com/5ADCjAk00pxkceC2Ek948B02phSF7KgGajNCiMRa2iYPo?metadata-video-title=CoachAir&video-title=CoachAir"
-                style={{ width: "100%", border: "none", aspectRatio: "16/9" }}
-                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                allowFullScreen
-                className="rounded-xl shadow-2xl"
-              />
+            <div className="flex flex-wrap gap-6 justify-center">
+              <div className="w-full md:w-[calc(50%-12px)]">
+                <iframe
+                  title="CoachAir-Sun'n'Fun-Radio"
+                  src="https://player.mux.com/5ADCjAk00pxkceC2Ek948B02phSF7KgGajNCiMRa2iYPo?metadata-video-title=CoachAir-Sun'n'Fun-Radio&video-title=CoachAir-Sun'n'Fun-Radio"
+                  style={{ width: "100%", border: "none", aspectRatio: "16/9" }}
+                  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                  allowFullScreen
+                  className="rounded-xl shadow-2xl"
+                />
+              </div>
+              <div className="w-full md:w-[calc(50%-12px)]">
+                <iframe
+                  title="CoachAir-Sun'n'Fun-Preview"
+                  src="https://www.youtube.com/embed/hByq5B_nGhg"
+                  style={{ width: "100%", border: "none", aspectRatio: "16/9" }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                  allowFullScreen
+                  className="rounded-xl shadow-2xl"
+                />
+              </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
