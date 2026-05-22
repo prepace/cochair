@@ -946,7 +946,7 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-wrap gap-6 justify-center">
-              <div className="w-full md:w-[calc(50%-12px)]">
+              <div className="w-full md:w-[calc(33.333%-16px)]">
                 <iframe
                   title="CoachAir-Sun'n'Fun-Radio"
                   src="https://player.mux.com/5ADCjAk00pxkceC2Ek948B02phSF7KgGajNCiMRa2iYPo?metadata-video-title=CoachAir-Sun'n'Fun-Radio&video-title=CoachAir-Sun'n'Fun-Radio"
@@ -956,10 +956,20 @@ export default function HomePage() {
                   className="rounded-xl shadow-2xl"
                 />
               </div>
-              <div className="w-full md:w-[calc(50%-12px)]">
+              <div className="w-full md:w-[calc(33.333%-16px)]">
                 <iframe
                   title="CoachAir-Sun'n'Fun-Preview"
                   src="https://www.youtube.com/embed/hByq5B_nGhg"
+                  style={{ width: "100%", border: "none", aspectRatio: "16/9" }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                  allowFullScreen
+                  className="rounded-xl shadow-2xl"
+                />
+              </div>
+              <div className="w-full md:w-[calc(33.333%-16px)]">
+                <iframe
+                  title="CoachAir-Video-3"
+                  src="https://www.youtube.com/embed/OqxFseJgHp4"
                   style={{ width: "100%", border: "none", aspectRatio: "16/9" }}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
                   allowFullScreen
