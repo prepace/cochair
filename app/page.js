@@ -33,13 +33,13 @@ export default function HomePage() {
   const [selectedQuestion, setSelectedQuestion] = useState(null);
 
   // Live metrics with animated counters
-  const [metrics, _setMetrics] = useState({
-    flights: 2847,
-    onTimeRate: 98.7,
-    availableJets: 156,
-    availableYachts: 89,
-    availableVehicles: 234,
-  });
+  // const [metrics, _setMetrics] = useState({
+  //   flights: 2847,
+  //   onTimeRate: 98.7,
+  //   availableJets: 156,
+  //   availableYachts: 89,
+  //   availableVehicles: 234,
+  // });
 
   // Animated counter hook
   const useCounter = (end, duration = 2000) => {
@@ -64,10 +64,10 @@ export default function HomePage() {
     return count;
   };
 
-  const flightCount = useCounter(metrics.flights);
-  const jetCount = useCounter(metrics.availableJets);
-  const yachtCount = useCounter(metrics.availableYachts);
-  const vehicleCount = useCounter(metrics.availableVehicles);
+  // const flightCount = useCounter(metrics.flights);
+  // const jetCount = useCounter(metrics.availableJets);
+  // const yachtCount = useCounter(metrics.availableYachts);
+  // const vehicleCount = useCounter(metrics.availableVehicles);
 
   // Typewriter animation hook
   const useTypewriter = (text, speed = 50) => {
@@ -334,7 +334,7 @@ export default function HomePage() {
             transition={{ duration: 1, delay: 0.5 }}
             className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 pb-8"
           >
-            <div className="theme-card backdrop-blur-lg border theme-border rounded-xl p-6 text-center">
+            {/* <div className="theme-card backdrop-blur-lg border theme-border rounded-xl p-6 text-center">
               <div className="text-4xl font-bold theme-primary-text">
                 {flightCount.toLocaleString()}
               </div>
@@ -357,7 +357,7 @@ export default function HomePage() {
                 {yachtCount + vehicleCount}
               </div>
               <div className="theme-muted-text">Fleet Assets</div>
-            </div>
+            </div>*/}
           </motion.div>
         </div>
       </section>
